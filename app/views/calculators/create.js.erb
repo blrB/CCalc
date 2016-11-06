@@ -1,0 +1,11 @@
+var div = document.getElementById("console");
+var input = document.getElementById("data");
+div.innerHTML = div.innerHTML + "<h5>$  " + input.value + "</h5>" ;
+<% if @result.is_a? Numeric %>
+div.innerHTML = div.innerHTML + "<h5>    =>  " + "<%= @result.to_s %>" + "</h5>";
+<% else %>
+div.innerHTML = div.innerHTML + "<h5>    =>   Math ERROR </h5>";
+<% end %>
+input.value = "";
+
+

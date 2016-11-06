@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails Console Calculator</title>
+  </head>
+  <body>
+    <div id="console"></div>
+    <table>
+    <tr>
+      <td><h5>$</h5></td>
+      <td style="width: 100%">
+          <%= form_tag(calculators_path, :method => :post, :remote => true, autocomplete: 'off') do %>
+          <%= text_field_tag :data, ' ', autofocus: true %>
+          <%= submit_tag "ok", :name => "sub" , :style => "display: none;" %>
+          <% end %>
+      </td>
+    </tr>
+    </table>
+  </body>
+</html>
+
+
+
